@@ -1,0 +1,36 @@
+intents:
+  - greet
+  - goodbye
+  - find_location
+  - city_info
+
+
+actions:
+  - action_show_location
+
+
+entities:
+  - country
+
+slots:
+  country:
+    type: text
+    auto_fill: True
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_finding_location:
+  - text : "Enter Country Name to Find Information Correctly."
+  
+  utter_country_find:
+  - text : "We Are Finding Your Location of {country}"
+
+  utter_goodbye:
+  - text: "Bye"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
